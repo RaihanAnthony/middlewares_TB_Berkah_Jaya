@@ -2,8 +2,8 @@ package middlewares
 
 import (
 	"net/http"
-	"TB_Berkah_Jaya/helper"
-	"TB_Berkah_Jaya/config"
+	helper "github.com/RaihanAnthony/helper_TB_Berkah_Jaya"
+	config "github.com/RaihanAnthony/config-TB_Berkah_Jaya"
 	"log"
 	"fmt"
 

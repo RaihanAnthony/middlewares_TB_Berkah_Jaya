@@ -4,7 +4,7 @@ import (
 	"time"
 	"log"
 	"github.com/golang-jwt/jwt/v5"
-	"TB_Berkah_Jaya/config"
+	config "github.com/RaihanAnthony/config-TB_Berkah_Jaya"
 )
 
 // GenerateResetToken generates a JWT token for password reset
