@@ -3,12 +3,13 @@ module github.com/RaihanMalay21/middlewares_TB_Berkah_Jaya
 go 1.22.2
 
 require (
-	github.com/RaihanAnthony/config-TB_Berkah_Jaya v0.0.0-20240809060935-eb0541d341d4
-	github.com/RaihanAnthony/helper_TB_Berkah_Jaya v0.0.0-20240809044620-4dca4f260873
+	github.com/RaihanMalay21/config-TB_Berkah_Jaya v0.0.0-20240813171615-4503b26823ca
+	github.com/RaihanMalay21/helper_TB_Berkah_Jaya v0.0.0-20240810144221-26bb52efd657
 	github.com/golang-jwt/jwt/v5 v5.2.1
 )
 
 require (
+	github.com/RaihanMalay21/models_TB_Berkah_Jaya v0.0.0-20240810142202-0d5c147efc3b // indirect
 	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect

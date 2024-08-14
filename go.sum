@@ -1,7 +1,9 @@
-github.com/RaihanAnthony/config-TB_Berkah_Jaya v0.0.0-20240809060935-eb0541d341d4 h1:r8vtGSH8RzCpXRxzZKMzdMP6m9fGb5o8ClcD6yKWxlU=
-github.com/RaihanAnthony/config-TB_Berkah_Jaya v0.0.0-20240809060935-eb0541d341d4/go.mod h1:+xR9f16wTSVvF4+z+LEZsmos5vbD675iwTeNd0e8EPw=
-github.com/RaihanAnthony/helper_TB_Berkah_Jaya v0.0.0-20240809044620-4dca4f260873 h1:TRbnEVrLV7ikgQjB9znvxC2gIKqtG62+orVMp2AdZ6I=
-github.com/RaihanAnthony/helper_TB_Berkah_Jaya v0.0.0-20240809044620-4dca4f260873/go.mod h1:AZt+UKcQucgj0EPRGqxfTizTNWKUak4fCW8ZPaLbVxs=
+github.com/RaihanMalay21/config-TB_Berkah_Jaya v0.0.0-20240813171615-4503b26823ca h1:CcR+ASKl9z00X1E6wihzM6Fk8RSzoZ45QOQd/PsHXW4=
+github.com/RaihanMalay21/config-TB_Berkah_Jaya v0.0.0-20240813171615-4503b26823ca/go.mod h1:scDCTmc4ph/hvVKTlb/9jgwYd0lYyb/DqMAiJgSlI0A=
+github.com/RaihanMalay21/helper_TB_Berkah_Jaya v0.0.0-20240810144221-26bb52efd657 h1:cNv1ccGJ/mnMkkCGHYXPXkB0AD9TV/UOP2EyXNXa0eM=
+github.com/RaihanMalay21/helper_TB_Berkah_Jaya v0.0.0-20240810144221-26bb52efd657/go.mod h1:AV63Lyik+W+Y4UqxdQbQaUEK5+fAdOyiflykJk72i90=
+github.com/RaihanMalay21/models_TB_Berkah_Jaya v0.0.0-20240810142202-0d5c147efc3b h1:K3kPxiC4qKL9xtg6p/5Vx8yl1sYmBZbKRzmAvIvQRQ0=
+github.com/RaihanMalay21/models_TB_Berkah_Jaya v0.0.0-20240810142202-0d5c147efc3b/go.mod h1:461RMxmBI4qfB3G6vaP6xz69M4NmBSB90Gof8yicg5Q=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/gabriel-vasile/mimetype v1.4.3 h1:in2uUcidCuFcDKtdcBxlR0rJ1+fsokWf+uqxgUFjbI0=
