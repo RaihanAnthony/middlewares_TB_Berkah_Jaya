@@ -3,7 +3,7 @@ package middlewares
 import (
 	"net/http"
 	helper "github.com/RaihanMalay21/helper_TB_Berkah_Jaya"
-	config "github.com/RaihanMalay21/config-TB_Berkah_Jaya"
+	config "github.com/RaihanMalay21/config-tb-berkah-jaya-development"
 	"log"
 	"fmt"
 
