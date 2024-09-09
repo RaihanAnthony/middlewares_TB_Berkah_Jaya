@@ -50,43 +50,62 @@ func JWTMiddleware(next http.Handler) http.Handler {
 			}
 		}
 
-		if !token.Valid {
-			log.Println("Error token tidak valid")
-			response := map[string]string{"message": "Unauthorized"}
+		// if !token.Valid {
+		// 	log.Println("Error token tidak valid")
+		// 	response := map[string]string{"message": "Unauthorized"}
+		// 	helper.Response(w, response, http.StatusUnauthorized)
+		// 	return
+		// }
+
+		// Memeriksa apakah token valid dan klaim tersedia
+		if claims, ok := token.Claims.(*config.JWTClaim); ok && token.Valid {
+			// Mengakses nilai Role dan ID
+			role := claims.Role
+			endpoint := r.URL.Path
+			// id := claims.ID
+			
+			// Gunakan nilai role dan id sesuai kebutuhan
+			if err := EndPointCanAccess(role, endpoint); err != nil {
+				log.Println("Acces denied to endpoint:", r.URL.Path)
+				message := map[string]interface{}{"message": err}
+				helper.Response(w, message, http.StatusForbidden)
+				return
+			}
+		} else {
+			response := map[string]interface{}{"message": "Unauthorized"}
 			helper.Response(w, response, http.StatusUnauthorized)
-			return
 		}
 
 		// inialisasi session untuk mengambil role dari user
-		session, err := config.Store.Get(r, "berkah-jaya-session")
-		if err != nil {
-			log.Println("Error getting session:", err)
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
+		// session, err := config.Store.Get(r, "berkah-jaya-session")
+		// if err != nil {
+		// 	log.Println("Error getting session:", err)
+		// 	http.Error(w, err.Error(), http.StatusInternalServerError)
+		// 	return
+		// }
 
-		// memeriksa role dalam session
-		role, ok := session.Values["role"]
-		if !ok || role == nil {
-			log.Println("Role is missing in session")
-			response := map[string]string{"message": "Unauthorized"}
-			helper.Response(w, response, http.StatusUnauthorized)
-		}
+		// // memeriksa role dalam session
+		// role, ok := session.Values["role"]
+		// if !ok || role == nil {
+		// 	log.Println("Role is missing in session")
+		// 	response := map[string]string{"message": "Unauthorized"}
+		// 	helper.Response(w, response, http.StatusUnauthorized)
+		// }
 
-		roleStr, ok := role.(string)
-        if !ok {
-            log.Println("Role is not a string:", role)
-            response := map[string]string{"message": "Unauthorized"}
-            helper.Response(w, response, http.StatusUnauthorized)
-            return
-        }
+		// roleStr, ok := role.(string)
+        // if !ok {
+        //     log.Println("Role is not a string:", role)
+        //     response := map[string]string{"message": "Unauthorized"}
+        //     helper.Response(w, response, http.StatusUnauthorized)
+        //     return
+        // }
 		
 		// memeriksa endpoint
-		if err := EndPointCanAccess(roleStr, r.URL.Path); err != nil {
-			log.Println("Acces denied to endpoint:", r.URL.Path)
-			http.Error(w, "endpoin tidak dapat di akses", http.StatusUnauthorized)
-			return
-		}
+		// if err := EndPointCanAccess(roleStr, r.URL.Path); err != nil {
+		// 	log.Println("Acces denied to endpoint:", r.URL.Path)
+		// 	http.Error(w, "endpoin tidak dapat di akses", http.StatusUnauthorized)
+		// 	return
+		// }
 
 		next.ServeHTTP(w, r)
 	})
